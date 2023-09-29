@@ -52,10 +52,11 @@ We further provide [docker images](./docker) for each environment suite benchmar
 
 ## Data / Demonstrations
 
-We benchmark on 3 environment suites, each with their own demonstrations. We have uploaded all demonstrations to [google drive](). We recommend you directly download these demonstrations to a `demos/` folder as opposed to trying to format them to include environment states as the code for that is quite complicated.
+We benchmark on 3 environment suites, each with their own demonstrations. We have uploaded all demonstrations to [google drive](https://drive.google.com/file/d/1SYNg-VoiRalUnmc8qVTq1oOln00sbNoC/view?usp=sharing). We recommend you directly download these demonstrations to a `demos/` folder as opposed to trying to format them yourself to include environment states.
+<!-- as the code for that is quite complicated. -->
 <!-- todo anon: use HF  -->
 
-If you are interested in how the demonstrations are formatted, you can take a look at `scripts/demos/<env_suite>/format_dataset.py`. We take existing demonstrations from the environment suites and format them into the flexible [ManiSkill2 demonstration format](https://haosulab.github.io/ManiSkill2/concepts/demonstrations.html#format), which is used as this format supports storing environment states out of the box which is needed by RFCL. Some environment demonstrations (e.g. Adroit human demonstrations) do not come with environment states, so we wrote some fairly complex code to extract them.
+<!-- If you are interested in how the demonstrations are formatted, you can take a look at `scripts/demos/<env_suite>/format_dataset.py`. We take existing demonstrations from the environment suites and format them into the flexible [ManiSkill2 demonstration format](https://haosulab.github.io/ManiSkill2/concepts/demonstrations.html#format), which is used as this format supports storing environment states out of the box which is needed by RFCL. Some environment demonstrations (e.g. Adroit human demonstrations) do not come with environment states, so we wrote some fairly complex code to extract them. --> -->
 
 ## Training
 
@@ -74,7 +75,7 @@ XLA_PYTHON_CLIENT_PREALLOCATE=false python train.py configs/ms2/sac_ms2_${env}.y
     train.steps=4000000
 ```
 
-And for sample-efficient hyperparameters (higher update to data ratio) you would use the _sample_efficient.yml file instead
+And for sample-efficient hyperparameters (higher update to data ratio) you would use the `configs/<env_suite>/..._sample_efficient.yml` file instead
 
 ```bash
 demos=5
