@@ -174,7 +174,7 @@ class YourInitialStateWrapper(InitialStateWrapper):
         return self.env.unwrapped.get_obs()
 ```
 
-Once defined, simply return this wrapper class in the function [`get_initial_state_wrapper` in `rfcls/envs/make_env/make_env.py`](./rfcl/envs/make_env/make_env.py). 
+Once defined, simply return this wrapper class in the function [`get_initial_state_wrapper` in `rfcls/envs/make_env/make_env.py`](./rfcl/envs/make_env/make_env.py#L186). 
 
 ### Adding Demonstration Data
 
